@@ -42,7 +42,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 23,
+    "uniqCompNum": 33,
     "versionPublish": "5.9.17",
     "screenshot": "screenshot.png",
     "publishChangesOnly": true
@@ -884,7 +884,7 @@
           },
           "_name": "aosHeader5",
           "_sourceTheme": "startm5",
-          "_customHTML": "<section class=\"aosheader5\" group=\"Animated on Scroll\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"aos,Typed\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <header>Zoom Animation</header>\n        <select title=\"Zoom\" name=\"zoomType\">\n      <option value=\"zoom-in\" selected>zoom-in</option>\n      <option value=\"zoom-in-up\">zoom-in-up</option>\n      <option value=\"zoom-in-down\">zoom-in-down</option>\n      <option value=\"zoom-in-left\">zoom-in-left</option>\n      <option value=\"zoom-in-right\">zoom-in-right</option>\n      <option value=\"zoom-out\">zoom-out</option>\n      <option value=\"zoom-out-up\">zoom-out-up</option>\n      <option value=\"zoom-out-down\">zoom-out-down</option>\n      <option value=\"zoom-out-left\">zoom-out-left</option>\n      <option value=\"zoom-out-right\">zoom-out-right</option>\n    </select>\n        <input type=\"range\" title=\"Delay\" name=\"zoomDelay\" min=\"0\" max=\"3000\" step=\"50\" value=\"400\">\n        <input type=\"range\" title=\"Duration\" name=\"zoomDuration\" min=\"0\" max=\"3000\" step=\"50\" value=\"400\">\n        <input type=\"checkbox\" title=\"Once\" name=\"zoomOnce\">\n        <input type=\"checkbox\" title=\"Mirror\" name=\"zoomMirror\">\n\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#232323\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#073b4c\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" condition=\"overlay && bg.type !== 'color'\">\n\n        <header codition=\"showSubtitle && showAnimatedText\">\n            Animated Text Settings\n        </header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle && showAnimatedText\">\n      <option value=\"title1\" selected>Title 1</option>\n      <option value=\"title2\">Title 2</option>\n      <option value=\"title3\">Title 3</option>\n      <option value=\"text\">Text</option>\n      <option value=\"menu\">Menu</option>\n    </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ffbc00\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"28\" step=\"1\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"Unique\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"Modern\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"Delicious\" condition=\"showSubtitle && showAnimatedText\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row\" data-aos=\"{{zoomType}}\" data-aos-delay=\"{{zoomDelay}}\" data-aos-duration=\"{{zoomDuration}}\" data-aos-once=\"{{zoomOnce}}\" data-aos-mirror=\"{{zoomMirror}}\">\n            <div class=\"mbr-white col-md-12\">\n                <h1 class=\"mbr-section-title mbr-white mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"></h1>\n                <div class=\"typed-text pb-3\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-7':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style mbr-white\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle\">Unlock Culinary Treasures which are</span>\n          <span mbr-if=\"showAnimatedText\">\n            <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-speed=\"{{typeSpeed}}\">\n            </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">Explore the vibrant world of African and Asian cuisine with Tourguide_bradford. We specialize in connecting you with authentic food markets that celebrate your culture. Discover local stores that offer ingredients and products tailored to your heritage, making it simpler to find what you need.\n<br>\n<br>With our seamless integration of Google Maps, navigating to these treasures is effortless. Enjoy personalized service, real-time product availability updates, and a community-focused approach that enhances your shopping experience. Join us in embracing the flavors of home and elevate your senses.<br>\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn\"><a class=\"btn btn-md btn-white\" type=\"submit\" data-app-placeholder=\"Type Text\">LEARN MORE</a></div>\n      </div>\n    </div>\n  </div>\n  <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n    <a href=\"#next\">\n      <i class=\"mbri-down mbr-iconfont\"></i>\n    </a>\n                </div>\n</section>",
+          "_customHTML": "<section class=\"aosheader5\" group=\"Animated on Scroll\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"aos,Typed\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <header>Zoom Animation</header>\n        <select title=\"Zoom\" name=\"zoomType\">\n      <option value=\"zoom-in\">zoom-in</option>\n      <option value=\"zoom-in-up\">zoom-in-up</option>\n      <option value=\"zoom-in-down\">zoom-in-down</option>\n      <option value=\"zoom-in-left\">zoom-in-left</option>\n      <option value=\"zoom-in-right\">zoom-in-right</option>\n      <option value=\"zoom-out\" selected>zoom-out</option>\n      <option value=\"zoom-out-up\">zoom-out-up</option>\n      <option value=\"zoom-out-down\">zoom-out-down</option>\n      <option value=\"zoom-out-left\">zoom-out-left</option>\n      <option value=\"zoom-out-right\">zoom-out-right</option>\n    </select>\n        <input type=\"range\" title=\"Delay\" name=\"zoomDelay\" min=\"0\" max=\"3000\" step=\"50\" value=\"0\">\n        <input type=\"range\" title=\"Duration\" name=\"zoomDuration\" min=\"0\" max=\"3000\" step=\"50\" value=\"0\">\n        <input type=\"checkbox\" title=\"Once\" name=\"zoomOnce\" checked>\n        <input type=\"checkbox\" title=\"Mirror\" name=\"zoomMirror\">\n\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#232323\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://www.youtube.com/watch?v=l8UXhtqV6hU\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#073b4c\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" condition=\"overlay && bg.type !== 'color'\">\n\n        <header codition=\"showSubtitle && showAnimatedText\">\n            Animated Text Settings\n        </header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle && showAnimatedText\">\n      <option value=\"title1\" selected>Title 1</option>\n      <option value=\"title2\">Title 2</option>\n      <option value=\"title3\">Title 3</option>\n      <option value=\"text\">Text</option>\n      <option value=\"menu\">Menu</option>\n    </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ffbc00\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"28\" step=\"1\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"Unique\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"Modern\" condition=\"showSubtitle && showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"Delicious\" condition=\"showSubtitle && showAnimatedText\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row\" data-aos=\"{{zoomType}}\" data-aos-delay=\"{{zoomDelay}}\" data-aos-duration=\"{{zoomDuration}}\" data-aos-once=\"{{zoomOnce}}\" data-aos-mirror=\"{{zoomMirror}}\">\n            <div class=\"mbr-white col-md-12\">\n                <h1 class=\"mbr-section-title mbr-white mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"></h1>\n                <div class=\"typed-text pb-3\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-7':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style mbr-white\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle\">Unlock Culinary Treasures which are</span>\n          <span mbr-if=\"showAnimatedText\">\n            <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-speed=\"{{typeSpeed}}\">\n            </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">Explore the vibrant world of African and Asian cuisine with Tourguide_bradford. We specialize in connecting you with authentic food markets that celebrate your culture. Discover local stores that offer ingredients and products tailored to your heritage, making it simpler to find what you need.\n<br>\n<br>With our seamless integration of Google Maps, navigating to these treasures is effortless. Enjoy personalized service, real-time product availability updates, and a community-focused approach that enhances your shopping experience. Join us in embracing the flavors of home and elevate your senses.<br>\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn\"><a class=\"btn btn-md btn-white\" type=\"submit\" data-app-placeholder=\"Type Text\">LEARN MORE</a></div>\n      </div>\n    </div>\n  </div>\n  <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n    <a href=\"#next\">\n      <i class=\"mbri-down mbr-iconfont\"></i>\n    </a>\n                </div>\n</section>",
           "_cid": "uEXAB9kpzm",
           "_anchor": "aosHeader5-2",
           "_protectedParams": [],
@@ -895,65 +895,122 @@
         {
           "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
             },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+            ".trans-wave": {
+              "opacity": "1",
+              "fill": "@bg-value",
+              "pointer-events": "none"
             },
-            ".dentaura-cover": {
-              "margin-left": "auto",
-              "margin-right": "auto",
-              "margin": "0px",
-              "padding": "0px",
+            ".dentaura-container": {
+              "height": "40px",
+              "position": "relative",
               "width": "100%"
             },
-            "hr.dashed": {
-              "border-top": "(@dividerThickness * 1px) dashed @dividerColor",
-              "width": "(@dividerWidth * 10%)"
+            ".dentaura-y-up": {
+              "position": "absolute",
+              "& when (@flipVerti = false)": {
+                "bottom": "39px"
+              },
+              "& when (@flipVerti)": {
+                "top": "39px",
+                "z-index": "@zindexOrderverti"
+              },
+              "left": "0",
+              "width": "100%",
+              "pointer-events": "none"
             },
-            "hr.dotted": {
-              "border-top": "(@dividerThickness * 1px) dotted @dividerColor",
-              "width": "(@dividerWidth * 10%)"
+            ".dentaura-cover": {
+              "background": "transparent",
+              "height": "(@heightWavecover * 1px)",
+              "width": "100%",
+              "position": "relative",
+              "overflow": "hidden",
+              "pointer-events": "none",
+              "& when (@flipVerti)": {
+                "-webkit-transform": "rotateX(180deg)",
+                "-moz-transform": "rotateX(180deg)",
+                "-o-transform": "rotateX(180deg)",
+                "-ms-transform": "rotateX(180deg)",
+                "transform": "rotateX(180deg)",
+                "& when (@flipDownHori)": {
+                  "-webkit-transform": "rotate(180deg)",
+                  "-moz-transform": "rotate(180deg)",
+                  "-o-transform": "rotate(180deg)",
+                  "-ms-transform": "rotate(180deg)",
+                  "transform": "rotate(180deg)"
+                }
+              },
+              "& when (@flipVerti = false)": {
+                "& when (@flipUpHori)": {
+                  "-webkit-transform": "rotateY(180deg)",
+                  "-moz-transform": "rotateY(180deg)",
+                  "-o-transform": "rotateY(180deg)",
+                  "-ms-transform": "rotateY(180deg)",
+                  "transform": "rotateY(180deg)"
+                }
+              }
             },
-            "hr.solid": {
-              "border-top": "(@dividerThickness * 1px) solid @dividerColor",
-              "width": "(@dividerWidth * 10%)"
+            ".dentaura-y-down": {
+              "position": "absolute",
+              "bottom": "0px",
+              "left": "0",
+              "width": "100%",
+              "pointer-events": "none",
+              "height": "15vh",
+              "min-height": "100px",
+              "max-height": "150px"
             },
-            "hr.double": {
-              "border-top": "(@dividerThicknessdouble * 1px) double @dividerColor",
-              "width": "(@dividerWidth * 10%)"
+            ".parallax > use": {
+              "animation": "move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5)",
+              "& when (@infiniteAnimation)": {
+                "animation-iteration-count": "infinite"
+              },
+              "& when (@infiniteAnimation = false)": {
+                "animation-iteration-count": "(@countAnimation * 1)"
+              }
             },
-            "hr.splitends": {
-              "height": "30px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "1px 0 0 0",
-              "border-radius": "20px",
-              "width": "(@dividerWidth * 10%)"
+            ".parallax > use:nth-child(1)": {
+              "animation-delay": "-2s",
+              "animation-duration": "7s"
             },
-            "hr.splitends:before": {
-              "display": "block",
-              "content": "\"\"",
-              "height": "30px",
-              "margin-top": "-31px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "0 0 1px 0",
-              "border-radius": "20px"
+            ".parallax > use:nth-child(2)": {
+              "animation-delay": "-3s",
+              "animation-duration": "10s"
+            },
+            ".parallax > use:nth-child(3)": {
+              "animation-delay": "-4s",
+              "animation-duration": "13s"
+            },
+            ".parallax > use:nth-child(4)": {
+              "animation-delay": "-5s",
+              "animation-duration": "20s"
+            },
+            "@keyframes move-forever": {
+              "0%": {
+                "transform": "translate3d(-90px, 0, 0)"
+              },
+              "100%": {
+                "transform": "translate3d(85px, 0, 0)"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".dentaura-y-down": {
+                "height": "40px",
+                "min-height": "40px"
+              }
             }
           },
-          "_name": "divider1",
+          "_name": "divider19",
           "_sourceTheme": "dentauram4",
-          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>PADDING</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <header>DIVIDER</header>        \n        <select title=\"Divider Type\" name=\"dividerType\">\n            <option value=\"dashed\" selected>Dashed</option>\n            <option value=\"dotted\">Dotted</option>\n            <option value=\"double\">Double</option>\n            <option value=\"solid\">Solid</option>\n            <option value=\"splitends\">Split Ends</option>\n        </select>\n        <input type=\"color\" title=\"Divider Color\" name=\"dividerColor\" value=\"#999999\">\n        <input type=\"range\" inline title=\"Divider Width\" name=\"dividerWidth\" min=\"1\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"range\" inline title=\"Divider Thickness\" name=\"dividerThickness\" min=\"1\" max=\"4\" step=\"1\" value=\"1\" condition=\"dividerType !== 'double' && dividerType !== 'splitends'\">\n        <input type=\"range\" inline title=\"Divider Thickness\" name=\"dividerThicknessdouble\" min=\"3\" max=\"4\" step=\"1\" value=\"3\" condition=\"dividerType == 'double' && dividerType !== 'dashed' && dividerType !== 'dotted' && dividerType !== 'solid' && dividerType !== 'splitends'\">\n        <header>BACKGROUND</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n        \n    <div class=\"container-fluid\">\n        <div class=\"dentaura-cover\">\n            <hr mbr-if=\"dividerType == 'dashed'\" class=\"dashed\">\n            <hr mbr-if=\"dividerType == 'dotted'\" class=\"dotted\">\n            <hr mbr-if=\"dividerType == 'solid'\" class=\"solid\">\n            <hr mbr-if=\"dividerType == 'double'\" class=\"double\">\n            <hr mbr-if=\"dividerType == 'splitends'\" class=\"splitends\">\n        </div>\n    </div>\n</section>",
-          "_cid": "uEY03PgkXg",
+          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>DIVIDER</header>        \n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"color\" title=\"Divider Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Flip Vertical\" name=\"flipVerti\">\n        <input type=\"checkbox\" title=\"Flip Horizontal\" name=\"flipUpHori\" condition=\"flipVerti == false\" checked>\n        <input type=\"checkbox\" title=\"Flip Horizontal\" name=\"flipDownHori\" condition=\"flipVerti\" checked>\n        <header>BLOCK ORDER (applicable when flipped downwards and when used in combination with other dividers)</header>\n        <input type=\"range\" inline title=\"Move backwards or forwards\" name=\"zindexOrderverti\" min=\"1\" max=\"500\" step=\"1\" value=\"1\" condition=\"flipVerti\">\n        <header>ANIMATION</header>\n        <input type=\"checkbox\" title=\"Infinite Animation\" name=\"infiniteAnimation\" checked>\n        <input type=\"range\" inline title=\"Iteration Count (Animation stops after the iteration count and will restart only after a page refresh)\" name=\"countAnimation\" min=\"5\" max=\"500\" step=\"1\" value=\"20\" condition=\"infiniteAnimation == false\">\n        <header>Wave Cover</header>\n        <input type=\"range\" inline title=\"Wave Cover height to avoid wave getting cut off\" name=\"heightWavecover\" min=\"150\" max=\"500\" step=\"1\" value=\"150\">\n        <header>NOTE:</header>\n        <header>Adjust height of blocks overlapped accordingly to accommodate this wave divider. Use only in suitable situations (eg: not suitable for small footer blocks). Minimum overlapping height of this block is 150px. Animated wave dividers may not work in all browsers like IE. However, it has been checked and verified as working in all major recent browsers.</header>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"dentaura-container\">\n        <div class=\"dentaura-y-up\">\n            <div class=\"dentaura-cover\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 24 150 28\" preserveAspectRatio=\"none\" shape-rendering=\"auto\" class=\"dentaura-y-down\">\n                <defs>\n                <path id=\"gentle-wave\" d=\"M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z\"></path>\n                </defs>\n                <g class=\"parallax\">\n\t\t\t\t\t<use xlink:href=\"#gentle-wave\" x=\"48\" y=\"7\" class=\"trans-wave\"></use>\n                </g>\n                </svg>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uEY3Zruxy2",
+          "_anchor": "divider19-o",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "divider1-j"
+          "_params": {}
         },
         {
           "alias": "animate-css/components",
@@ -1237,70 +1294,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".dentaura-cover": {
-              "margin-left": "auto",
-              "margin-right": "auto",
-              "margin": "0px",
-              "padding": "0px",
-              "width": "100%"
-            },
-            "hr.dashed": {
-              "border-top": "(@dividerThickness * 1px) dashed @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.dotted": {
-              "border-top": "(@dividerThickness * 1px) dotted @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.solid": {
-              "border-top": "(@dividerThickness * 1px) solid @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.double": {
-              "border-top": "(@dividerThicknessdouble * 1px) double @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.splitends": {
-              "height": "30px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "1px 0 0 0",
-              "border-radius": "20px",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.splitends:before": {
-              "display": "block",
-              "content": "\"\"",
-              "height": "30px",
-              "margin-top": "-31px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "0 0 1px 0",
-              "border-radius": "20px"
-            }
-          },
-          "_name": "divider1",
-          "_sourceTheme": "dentauram4",
-          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>PADDING</header>\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <header>DIVIDER</header>        \n        <select title=\"Divider Type\" name=\"dividerType\">\n            <option value=\"dashed\" selected=\"\">Dashed</option>\n            <option value=\"dotted\">Dotted</option>\n            <option value=\"double\">Double</option>\n            <option value=\"solid\">Solid</option>\n            <option value=\"splitends\">Split Ends</option>\n        </select>\n        <input type=\"color\" title=\"Divider Color\" name=\"dividerColor\" value=\"#999999\">\n        <input type=\"range\" inline=\"\" title=\"Divider Width\" name=\"dividerWidth\" min=\"1\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"range\" inline=\"\" title=\"Divider Thickness\" name=\"dividerThickness\" min=\"1\" max=\"4\" step=\"1\" value=\"1\" condition=\"dividerType !== 'double' &amp;&amp; dividerType !== 'splitends'\">\n        <input type=\"range\" inline=\"\" title=\"Divider Thickness\" name=\"dividerThicknessdouble\" min=\"3\" max=\"4\" step=\"1\" value=\"3\" condition=\"dividerType == 'double' &amp;&amp; dividerType !== 'dashed' &amp;&amp; dividerType !== 'dotted' &amp;&amp; dividerType !== 'solid' &amp;&amp; dividerType !== 'splitends'\">\n        <header>BACKGROUND</header>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected=\"\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n        \n    <div class=\"container-fluid\">\n        <div class=\"dentaura-cover\">\n            <hr mbr-if=\"dividerType == 'dashed'\" class=\"dashed\">\n            <hr mbr-if=\"dividerType == 'dotted'\" class=\"dotted\">\n            <hr mbr-if=\"dividerType == 'solid'\" class=\"solid\">\n            <hr mbr-if=\"dividerType == 'double'\" class=\"double\">\n            <hr mbr-if=\"dividerType == 'splitends'\" class=\"splitends\">\n        </div>\n    </div>\n</section>",
-          "_anchor": "divider1-k",
-          "_isUserblock": true,
-          "_cid": "uEY09ORsUc",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
           "alias": "animate-css/components",
           "_isSecondary": true,
           "typeCompatible": "type",
@@ -1344,9 +1337,72 @@
           },
           "_name": "animateFeatures66",
           "_sourceTheme": "startm5",
-          "_customHTML": "<section group=\"Animate CSS\" class=\"animateFeatures66 extFeatures popup-btn-cards\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax,'mbr-fullscreen': fullScreen}\" plugins=\"mbr-popup-btns, animate-css\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\">\n        <input type=\"text\" title=\"Link\" name=\"linkValue\" value>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Min Height\" name=\"blockHeight\" min=\"1\" max=\"25\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"1\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    \n<!-- Begin Animate CSS Section -->\n<header>Animate</header>\n<select title=\"Container\" name=\"aContainer\">\n<option value>none</option>\n<optgroup label=\"Attention Seekers\">\n  <option value=\"bounce\">bounce</option>\n  <option value=\"flash\">flash</option>\n  <option value=\"pulse\">pulse</option>\n  <option value=\"rubberBand\">rubberBand</option>\n  <option value=\"shakeX\">shakeX</option>\n  <option value=\"shakeY\">shakeY</option>\n  <option value=\"headShake\">headShake</option>\n  <option value=\"swing\">swing</option>\n  <option value=\"tada\">tada</option>\n  <option value=\"wobble\">wobble</option>\n  <option value=\"jello\">jello</option>\n  <option value=\"heartBeat\">heartBeat</option>\n</optgroup>\n<optgroup label=\"Back entrances\">\n  <option value=\"backInDown\">backInDown</option>\n  <option value=\"backInLeft\">backInLeft</option>\n  <option value=\"backInRight\">backInRight</option>\n  <option value=\"backInUp\">backInUp</option>\n</optgroup>\n<optgroup label=\"Back exits<\">\n  <option value=\"backOutDown\">backOutDown</option>\n  <option value=\"backOutLeft\">backOutLeft</option>\n  <option value=\"backOutRight\">backOutRight</option>\n  <option value=\"backOutUp\">backOutUp</option>\n</optgroup>\n<optgroup label=\"Bouncing entrances\">\n  <option value=\"bounceInDown\">bounceInDown</option>\n  <option value=\"bounceInLeft\">bounceInLeft</option>\n  <option value=\"bounceInRight\">bounceInRight</option>\n  <option value=\"bounceInUp\">bounceInUp</option>\n</optgroup>\n<optgroup label=\"Bouncing exits\">\n  <option value=\"bounceOutDown\">bounceOutDown</option>\n  <option value=\"bounceOutLeft\">bounceOutLeft</option>\n  <option value=\"bounceOutRight\">bounceOutRight</option>\n  <option value=\"bounceOutUp\">bounceOutUp</option>\n</optgroup>\n<optgroup label=\"Fading Entrances\">\n  <option value=\"fadeIn\">fadeIn</option>\n  <option value=\"fadeInDown\">fadeInDown</option>\n  <option value=\"fadeInDownBig\">fadeInDownBig</option>\n  <option value=\"fadeInLeft\">fadeInLeft</option>\n  <option value=\"fadeInLeftBig\">fadeInLeftBig</option>\n  <option value=\"fadeInRight\">fadeInRight</option>\n  <option value=\"fadeInRightBig\">fadeInRightBig</option>\n  <option value=\"fadeInUp\">fadeInUp</option>\n  <option value=\"fadeInUpBig\">fadeInUpBig</option>\n</optgroup>\n<optgroup label=\"Fading Exits\">\n  <option value=\"fadeOut\">fadeOut</option>\n  <option value=\"fadeOutDown\">fadeOutDown</option>\n  <option value=\"fadeOutDownBig\">fadeOutDownBig</option>\n  <option value=\"fadeOutLeft\">fadeOutLeft</option>\n  <option value=\"fadeOutLeftBig\">fadeOutLeftBig</option>\n  <option value=\"fadeOutRight\">fadeOutRight</option>\n  <option value=\"fadeOutRightBig\">fadeOutRightBig</option>\n  <option value=\"fadeOutUp\">fadeOutUp</option>\n  <option value=\"fadeOutUpBig\">fadeOutUpBig</option>\n</optgroup>\n<optgroup label=\"Flippers\">\n  <option value=\"flip\">flip</option>\n  <option value=\"flipInX\">flipInX</option>\n  <option value=\"flipInY\">flipInY</option>\n  <option value=\"flipOutX\">flipOutX</option>\n  <option value=\"flipOutY\">flipOutY</option>\n</optgroup>\n<optgroup label=\"Lightspeed\">\n  <option value=\"lightSpeedIn\">lightSpeedIn</option>\n  <option value=\"lightSpeedOut\">lightSpeedOut</option>\n</optgroup>\n<optgroup label=\"Rotating Entrances\">\n  <option value=\"rotateIn\">rotateIn</option>\n  <option value=\"rotateInDownLeft\">rotateInDownLeft</option>\n  <option value=\"rotateInDownRight\">rotateInDownRight</option>\n  <option value=\"rotateInUpLeft\">rotateInUpLeft</option>\n  <option value=\"rotateInUpRight\">rotateInUpRight</option>\n</optgroup>\n<optgroup label=\"Rotating Exits\">\n  <option value=\"rotateOut\">rotateOut</option>\n  <option value=\"rotateOutDownLeft\">rotateOutDownLeft</option>\n  <option value=\"rotateOutDownRight\">rotateOutDownRight</option>\n  <option value=\"rotateOutUpLeft\">rotateOutUpLeft</option>\n  <option value=\"rotateOutUpRight\">rotateOutUpRight</option>\n</optgroup>\n<optgroup label=\"Sliding Entrances\">\n  <option value=\"slideInUp\">slideInUp</option>\n  <option value=\"slideInDown\">slideInDown</option>\n  <option value=\"slideInLeft\" selected>slideInLeft</option>\n  <option value=\"slideInRight\">slideInRight</option>\n</optgroup>\n<optgroup label=\"Sliding Exits\">\n  <option value=\"slideOutUp\">slideOutUp</option>\n  <option value=\"slideOutDown\">slideOutDown</option>\n  <option value=\"slideOutLeft\">slideOutLeft</option>\n  <option value=\"slideOutRight\">slideOutRight</option>\n</optgroup>\n<optgroup label=\"Zoom Entrances\">\n  <option value=\"zoomIn\">zoomIn</option>\n  <option value=\"zoomInDown\">zoomInDown</option>\n  <option value=\"zoomInLeft\">zoomInLeft</option>\n  <option value=\"zoomInRight\">zoomInRight</option>\n  <option value=\"zoomInUp\">zoomInUp</option>\n</optgroup>\n<optgroup label=\"Zoom Exits\">\n  <option value=\"zoomOut\">zoomOut</option>\n  <option value=\"zoomOutDown\">zoomOutDown</option>\n  <option value=\"zoomOutLeft\">zoomOutLeft</option>\n  <option value=\"zoomOutRight\">zoomOutRight</option>\n  <option value=\"zoomOutUp\">zoomOutUp</option>\n</optgroup>\n<optgroup label=\"Specials\">\n  <option value=\"hinge\">hinge</option>\n  <option value=\"jackInTheBox\">jackInTheBox</option>\n  <option value=\"rollIn\">rollIn</option>\n  <option value=\"rollOut\">rollOut</option>\n</optgroup>\n</select>\n\n<input type=\"range\" inline title=\"Delay\" name=\"delay\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n<input type=\"range\" inline title=\"Duration\" name=\"duration\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\n<select title=\"Speed Time\" name=\"speed\">\n  <option value=\"animate__slow\">slow 2s</option>\n  <option value=\"animate__slower\" selected>slower 3s</option>\n  <option value=\"animate__fast\">fast 800ms</option>\n  <option value=\"animate__faster\">faster 500ms</option>\n</select>\n\n<select title=\"Iteration Count\" name=\"repeat\">\n  <option value=\"animate__repeat-1\" selected>1</option>\n  <option value=\"animate__repeat-2\">2</option>\n  <option value=\"animate__repeat-3\">3</option>\n  <option value=\"animate__infinite\">infinite</option>\n</select>\n<!-- End Animate CSS Section -->\n</mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <a class=\"full-link\" href=\"{{linkValue}}\"></a>\n    <div class=\"container-fluid {{aContainer}} scrollanimation animate__animated animate__delay-{{delay}}s animate__duration-{{duration}}s {{speed}} {{repeat}} card-wrapper\">\n        <div class=\"row justify-content-center align-items-center\" mbr-style=\"{'min-height':blockHeight + 'vw'}\">\n             <div class=\"col-xl-10 col-lg-10 col-md-12 text-block\">\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-2\">Our Exquisite Gallery</h2>                 \n             </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section group=\"Animate CSS\" class=\"animateFeatures66 extFeatures popup-btn-cards\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax,'mbr-fullscreen': fullScreen}\" plugins=\"mbr-popup-btns, animate-css\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\">\n        <input type=\"text\" title=\"Link\" name=\"linkValue\" value>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Min Height\" name=\"blockHeight\" min=\"1\" max=\"25\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"1\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    \n<!-- Begin Animate CSS Section -->\n<header>Animate</header>\n<select title=\"Container\" name=\"aContainer\">\n<option value>none</option>\n<optgroup label=\"Attention Seekers\">\n  <option value=\"bounce\">bounce</option>\n  <option value=\"flash\">flash</option>\n  <option value=\"pulse\">pulse</option>\n  <option value=\"rubberBand\">rubberBand</option>\n  <option value=\"shakeX\">shakeX</option>\n  <option value=\"shakeY\">shakeY</option>\n  <option value=\"headShake\">headShake</option>\n  <option value=\"swing\">swing</option>\n  <option value=\"tada\">tada</option>\n  <option value=\"wobble\">wobble</option>\n  <option value=\"jello\">jello</option>\n  <option value=\"heartBeat\">heartBeat</option>\n</optgroup>\n<optgroup label=\"Back entrances\">\n  <option value=\"backInDown\">backInDown</option>\n  <option value=\"backInLeft\">backInLeft</option>\n  <option value=\"backInRight\">backInRight</option>\n  <option value=\"backInUp\">backInUp</option>\n</optgroup>\n<optgroup label=\"Back exits<\">\n  <option value=\"backOutDown\">backOutDown</option>\n  <option value=\"backOutLeft\">backOutLeft</option>\n  <option value=\"backOutRight\">backOutRight</option>\n  <option value=\"backOutUp\">backOutUp</option>\n</optgroup>\n<optgroup label=\"Bouncing entrances\">\n  <option value=\"bounceInDown\">bounceInDown</option>\n  <option value=\"bounceInLeft\">bounceInLeft</option>\n  <option value=\"bounceInRight\">bounceInRight</option>\n  <option value=\"bounceInUp\">bounceInUp</option>\n</optgroup>\n<optgroup label=\"Bouncing exits\">\n  <option value=\"bounceOutDown\">bounceOutDown</option>\n  <option value=\"bounceOutLeft\">bounceOutLeft</option>\n  <option value=\"bounceOutRight\">bounceOutRight</option>\n  <option value=\"bounceOutUp\">bounceOutUp</option>\n</optgroup>\n<optgroup label=\"Fading Entrances\">\n  <option value=\"fadeIn\">fadeIn</option>\n  <option value=\"fadeInDown\">fadeInDown</option>\n  <option value=\"fadeInDownBig\">fadeInDownBig</option>\n  <option value=\"fadeInLeft\">fadeInLeft</option>\n  <option value=\"fadeInLeftBig\">fadeInLeftBig</option>\n  <option value=\"fadeInRight\">fadeInRight</option>\n  <option value=\"fadeInRightBig\">fadeInRightBig</option>\n  <option value=\"fadeInUp\">fadeInUp</option>\n  <option value=\"fadeInUpBig\">fadeInUpBig</option>\n</optgroup>\n<optgroup label=\"Fading Exits\">\n  <option value=\"fadeOut\">fadeOut</option>\n  <option value=\"fadeOutDown\">fadeOutDown</option>\n  <option value=\"fadeOutDownBig\">fadeOutDownBig</option>\n  <option value=\"fadeOutLeft\">fadeOutLeft</option>\n  <option value=\"fadeOutLeftBig\">fadeOutLeftBig</option>\n  <option value=\"fadeOutRight\">fadeOutRight</option>\n  <option value=\"fadeOutRightBig\">fadeOutRightBig</option>\n  <option value=\"fadeOutUp\">fadeOutUp</option>\n  <option value=\"fadeOutUpBig\">fadeOutUpBig</option>\n</optgroup>\n<optgroup label=\"Flippers\">\n  <option value=\"flip\">flip</option>\n  <option value=\"flipInX\">flipInX</option>\n  <option value=\"flipInY\">flipInY</option>\n  <option value=\"flipOutX\">flipOutX</option>\n  <option value=\"flipOutY\">flipOutY</option>\n</optgroup>\n<optgroup label=\"Lightspeed\">\n  <option value=\"lightSpeedIn\">lightSpeedIn</option>\n  <option value=\"lightSpeedOut\">lightSpeedOut</option>\n</optgroup>\n<optgroup label=\"Rotating Entrances\">\n  <option value=\"rotateIn\">rotateIn</option>\n  <option value=\"rotateInDownLeft\">rotateInDownLeft</option>\n  <option value=\"rotateInDownRight\">rotateInDownRight</option>\n  <option value=\"rotateInUpLeft\">rotateInUpLeft</option>\n  <option value=\"rotateInUpRight\">rotateInUpRight</option>\n</optgroup>\n<optgroup label=\"Rotating Exits\">\n  <option value=\"rotateOut\">rotateOut</option>\n  <option value=\"rotateOutDownLeft\">rotateOutDownLeft</option>\n  <option value=\"rotateOutDownRight\">rotateOutDownRight</option>\n  <option value=\"rotateOutUpLeft\">rotateOutUpLeft</option>\n  <option value=\"rotateOutUpRight\">rotateOutUpRight</option>\n</optgroup>\n<optgroup label=\"Sliding Entrances\">\n  <option value=\"slideInUp\">slideInUp</option>\n  <option value=\"slideInDown\">slideInDown</option>\n  <option value=\"slideInLeft\" selected>slideInLeft</option>\n  <option value=\"slideInRight\">slideInRight</option>\n</optgroup>\n<optgroup label=\"Sliding Exits\">\n  <option value=\"slideOutUp\">slideOutUp</option>\n  <option value=\"slideOutDown\">slideOutDown</option>\n  <option value=\"slideOutLeft\">slideOutLeft</option>\n  <option value=\"slideOutRight\">slideOutRight</option>\n</optgroup>\n<optgroup label=\"Zoom Entrances\">\n  <option value=\"zoomIn\">zoomIn</option>\n  <option value=\"zoomInDown\">zoomInDown</option>\n  <option value=\"zoomInLeft\">zoomInLeft</option>\n  <option value=\"zoomInRight\">zoomInRight</option>\n  <option value=\"zoomInUp\">zoomInUp</option>\n</optgroup>\n<optgroup label=\"Zoom Exits\">\n  <option value=\"zoomOut\">zoomOut</option>\n  <option value=\"zoomOutDown\">zoomOutDown</option>\n  <option value=\"zoomOutLeft\">zoomOutLeft</option>\n  <option value=\"zoomOutRight\">zoomOutRight</option>\n  <option value=\"zoomOutUp\">zoomOutUp</option>\n</optgroup>\n<optgroup label=\"Specials\">\n  <option value=\"hinge\">hinge</option>\n  <option value=\"jackInTheBox\">jackInTheBox</option>\n  <option value=\"rollIn\">rollIn</option>\n  <option value=\"rollOut\">rollOut</option>\n</optgroup>\n</select>\n\n<input type=\"range\" inline title=\"Delay\" name=\"delay\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n<input type=\"range\" inline title=\"Duration\" name=\"duration\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\n<select title=\"Speed Time\" name=\"speed\">\n  <option value=\"animate__slow\">slow 2s</option>\n  <option value=\"animate__slower\" selected>slower 3s</option>\n  <option value=\"animate__fast\">fast 800ms</option>\n  <option value=\"animate__faster\">faster 500ms</option>\n</select>\n\n<select title=\"Iteration Count\" name=\"repeat\">\n  <option value=\"animate__repeat-1\" selected>1</option>\n  <option value=\"animate__repeat-2\">2</option>\n  <option value=\"animate__repeat-3\">3</option>\n  <option value=\"animate__infinite\">infinite</option>\n</select>\n<!-- End Animate CSS Section -->\n</mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <a class=\"full-link\" href=\"{{linkValue}}\"></a>\n    <div class=\"container-fluid {{aContainer}} scrollanimation animate__animated animate__delay-{{delay}}s animate__duration-{{duration}}s {{speed}} {{repeat}} card-wrapper\">\n        <div class=\"row justify-content-center align-items-center\" mbr-style=\"{'min-height':blockHeight + 'vw'}\">\n             <div class=\"col-xl-10 col-lg-10 col-md-12 text-block\">\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-2\">e Gallery</h2>                 \n             </div>\n        </div>\n    </div>\n</section>",
           "_cid": "uEXFsjIcGL",
           "_anchor": "animateFeatures66-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "0px",
+            "padding-bottom": "0px",
+            ".container-fluid": {
+              "margin": "0px",
+              "padding": "0px",
+              "height": "auto",
+              "min-height": "50px"
+            },
+            ".dentaura-cover": {
+              "margin-left": "auto",
+              "margin-right": "auto",
+              "width": "100% !important",
+              "background-color": "transparent",
+              "margin": "0px",
+              "padding": "0px",
+              "height": "40px",
+              "z-index": "1",
+              "position": "relative"
+            },
+            ".dentaura-cover .dentaura-skew:before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "(@verticalPositioning * -1px)",
+              "overflow": "visible",
+              "width": "100%",
+              "height": "(@heightSkew * 1px)",
+              "background-color": "@bgColortwo",
+              "z-index": "-1",
+              "-webkit-transform": "skewY(@angleSkew * -1deg)",
+              "-moz-transform": "skewY(@angleSkew * -1deg)",
+              "-ms-transform": "skewY(@angleSkew * -1deg)",
+              "-o-transform": "skewY(@angleSkew * -1deg)",
+              "transform": "skewY(@angleSkew * -1deg)",
+              "-webkit-backface-visibility": "hidden",
+              "backface-visibility": "initial",
+              "& when (@shadow)": {
+                "-webkit-box-shadow": "0 (@shadowHeight * 1px) (@shadowBlur * 1px) 1px @shadowColor",
+                "-moz-box-shadow": "0 (@shadowHeight * 1px) (@shadowBlur * 1px) 1px @shadowColor",
+                "box-shadow": "0 (@shadowHeight * 1px) (@shadowBlur * 1px) 1px @shadowColor"
+              }
+            },
+            ".dentaura-y-down": {
+              "position": "absolute",
+              "bottom": "0px",
+              "left": "0",
+              "width": "100%",
+              "pointer-events": "none"
+            }
+          },
+          "_name": "divider6",
+          "_sourceTheme": "dentauram4",
+          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>SKEW</header>\n        <input type=\"range\" inline title=\"Vertical Positioning\" name=\"verticalPositioning\" min=\"100\" max=\"150\" step=\"1\" value=\"119\">\n        <input type=\"range\" inline title=\"Height\" name=\"heightSkew\" min=\"180\" max=\"250\" step=\"1\" value=\"180\">\n        <input type=\"range\" inline title=\"Angle\" name=\"angleSkew\" min=\"-3\" max=\"3\" step=\"1\" value=\"-3\">\n        <input type=\"color\" title=\"Skew Color\" name=\"bgColortwo\" value=\"#000000\">\n        <header>BACKGROUND</header>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#000000\">\n        <header>SHADOW</header>\n        <input type=\"checkbox\" title=\"Shadow\" name=\"shadow\">\n        <input type=\"color\" title=\"Shadow Color\" name=\"shadowColor\" value=\"#777777\" condition=\"shadow\">\n        <input type=\"range\" inline title=\"Shadow Height\" name=\"shadowHeight\" min=\"-10\" max=\"10\" step=\"1\" value=\"0\" condition=\"shadow\">\n        <input type=\"range\" inline title=\"Shadow Blur Radius\" name=\"shadowBlur\" min=\"0\" max=\"8\" step=\"1\" value=\"1\" condition=\"shadow\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container-fluid\">\n        <div class=\"dentaura-cover\">\n            <div class=\"dentaura-y-down\">\n                <div class=\"dentaura-skew\"></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uEY56fENUE",
+          "_anchor": "divider6-r",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -1412,7 +1468,7 @@
           },
           "_name": "animateFeatures27",
           "_sourceTheme": "dentauram4",
-          "_customHTML": "<section class=\"animateFeatures27 mbr-section extFeatures\" group=\"Animate CSS\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"animate-css\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Show Cards Buttons\" name=\"showCardsButtons\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\" selected>6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Text on Left/Right\" name=\"reverseContent\" condition=\"cardsAmount !== '1'\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1272.jpg\" parallax selected> \n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    \n<!-- Begin Animate CSS Section -->\n<header>Animate</header>\n<select title=\"Container\" name=\"aContainer\">\n<option value>none</option>\n<optgroup label=\"Attention Seekers\">\n  <option value=\"bounce\">bounce</option>\n  <option value=\"flash\">flash</option>\n  <option value=\"pulse\">pulse</option>\n  <option value=\"rubberBand\">rubberBand</option>\n  <option value=\"shakeX\">shakeX</option>\n  <option value=\"shakeY\">shakeY</option>\n  <option value=\"headShake\">headShake</option>\n  <option value=\"swing\">swing</option>\n  <option value=\"tada\">tada</option>\n  <option value=\"wobble\">wobble</option>\n  <option value=\"jello\">jello</option>\n  <option value=\"heartBeat\">heartBeat</option>\n</optgroup>\n<optgroup label=\"Back entrances\">\n  <option value=\"backInDown\">backInDown</option>\n  <option value=\"backInLeft\">backInLeft</option>\n  <option value=\"backInRight\">backInRight</option>\n  <option value=\"backInUp\">backInUp</option>\n</optgroup>\n<optgroup label=\"Back exits<\">\n  <option value=\"backOutDown\">backOutDown</option>\n  <option value=\"backOutLeft\">backOutLeft</option>\n  <option value=\"backOutRight\">backOutRight</option>\n  <option value=\"backOutUp\">backOutUp</option>\n</optgroup>\n<optgroup label=\"Bouncing entrances\">\n  <option value=\"bounceInDown\">bounceInDown</option>\n  <option value=\"bounceInLeft\">bounceInLeft</option>\n  <option value=\"bounceInRight\">bounceInRight</option>\n  <option value=\"bounceInUp\">bounceInUp</option>\n</optgroup>\n<optgroup label=\"Bouncing exits\">\n  <option value=\"bounceOutDown\">bounceOutDown</option>\n  <option value=\"bounceOutLeft\">bounceOutLeft</option>\n  <option value=\"bounceOutRight\">bounceOutRight</option>\n  <option value=\"bounceOutUp\">bounceOutUp</option>\n</optgroup>\n<optgroup label=\"Fading Entrances\">\n  <option value=\"fadeIn\">fadeIn</option>\n  <option value=\"fadeInDown\">fadeInDown</option>\n  <option value=\"fadeInDownBig\">fadeInDownBig</option>\n  <option value=\"fadeInLeft\">fadeInLeft</option>\n  <option value=\"fadeInLeftBig\">fadeInLeftBig</option>\n  <option value=\"fadeInRight\">fadeInRight</option>\n  <option value=\"fadeInRightBig\">fadeInRightBig</option>\n  <option value=\"fadeInUp\">fadeInUp</option>\n  <option value=\"fadeInUpBig\">fadeInUpBig</option>\n</optgroup>\n<optgroup label=\"Fading Exits\">\n  <option value=\"fadeOut\">fadeOut</option>\n  <option value=\"fadeOutDown\">fadeOutDown</option>\n  <option value=\"fadeOutDownBig\">fadeOutDownBig</option>\n  <option value=\"fadeOutLeft\">fadeOutLeft</option>\n  <option value=\"fadeOutLeftBig\">fadeOutLeftBig</option>\n  <option value=\"fadeOutRight\">fadeOutRight</option>\n  <option value=\"fadeOutRightBig\">fadeOutRightBig</option>\n  <option value=\"fadeOutUp\">fadeOutUp</option>\n  <option value=\"fadeOutUpBig\">fadeOutUpBig</option>\n</optgroup>\n<optgroup label=\"Flippers\">\n  <option value=\"flip\">flip</option>\n  <option value=\"flipInX\">flipInX</option>\n  <option value=\"flipInY\">flipInY</option>\n  <option value=\"flipOutX\">flipOutX</option>\n  <option value=\"flipOutY\">flipOutY</option>\n</optgroup>\n<optgroup label=\"Lightspeed\">\n  <option value=\"lightSpeedIn\">lightSpeedIn</option>\n  <option value=\"lightSpeedOut\">lightSpeedOut</option>\n</optgroup>\n<optgroup label=\"Rotating Entrances\">\n  <option value=\"rotateIn\">rotateIn</option>\n  <option value=\"rotateInDownLeft\">rotateInDownLeft</option>\n  <option value=\"rotateInDownRight\">rotateInDownRight</option>\n  <option value=\"rotateInUpLeft\">rotateInUpLeft</option>\n  <option value=\"rotateInUpRight\">rotateInUpRight</option>\n</optgroup>\n<optgroup label=\"Rotating Exits\">\n  <option value=\"rotateOut\">rotateOut</option>\n  <option value=\"rotateOutDownLeft\">rotateOutDownLeft</option>\n  <option value=\"rotateOutDownRight\">rotateOutDownRight</option>\n  <option value=\"rotateOutUpLeft\">rotateOutUpLeft</option>\n  <option value=\"rotateOutUpRight\">rotateOutUpRight</option>\n</optgroup>\n<optgroup label=\"Sliding Entrances\">\n  <option value=\"slideInUp\">slideInUp</option>\n  <option value=\"slideInDown\">slideInDown</option>\n  <option value=\"slideInLeft\" selected>slideInLeft</option>\n  <option value=\"slideInRight\">slideInRight</option>\n</optgroup>\n<optgroup label=\"Sliding Exits\">\n  <option value=\"slideOutUp\">slideOutUp</option>\n  <option value=\"slideOutDown\">slideOutDown</option>\n  <option value=\"slideOutLeft\">slideOutLeft</option>\n  <option value=\"slideOutRight\">slideOutRight</option>\n</optgroup>\n<optgroup label=\"Zoom Entrances\">\n  <option value=\"zoomIn\">zoomIn</option>\n  <option value=\"zoomInDown\">zoomInDown</option>\n  <option value=\"zoomInLeft\">zoomInLeft</option>\n  <option value=\"zoomInRight\">zoomInRight</option>\n  <option value=\"zoomInUp\">zoomInUp</option>\n</optgroup>\n<optgroup label=\"Zoom Exits\">\n  <option value=\"zoomOut\">zoomOut</option>\n  <option value=\"zoomOutDown\">zoomOutDown</option>\n  <option value=\"zoomOutLeft\">zoomOutLeft</option>\n  <option value=\"zoomOutRight\">zoomOutRight</option>\n  <option value=\"zoomOutUp\">zoomOutUp</option>\n</optgroup>\n<optgroup label=\"Specials\">\n  <option value=\"hinge\">hinge</option>\n  <option value=\"jackInTheBox\">jackInTheBox</option>\n  <option value=\"rollIn\">rollIn</option>\n  <option value=\"rollOut\">rollOut</option>\n</optgroup>\n</select>\n\n<input type=\"range\" inline title=\"Delay\" name=\"delay\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n<input type=\"range\" inline title=\"Duration\" name=\"duration\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\n<select title=\"Speed Time\" name=\"speed\">\n  <option value=\"animate__slow\">slow 2s</option>\n  <option value=\"animate__slower\" selected>slower 3s</option>\n  <option value=\"animate__fast\">fast 800ms</option>\n  <option value=\"animate__faster\">faster 500ms</option>\n</select>\n\n<select title=\"Iteration Count\" name=\"repeat\">\n  <option value=\"animate__repeat-1\" selected>1</option>\n  <option value=\"animate__repeat-2\">2</option>\n  <option value=\"animate__repeat-3\">3</option>\n  <option value=\"animate__infinite\">infinite</option>\n</select>\n<!-- End Animate CSS Section -->\n</mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container-fluid {{aContainer}} scrollanimation animate__animated animate__delay-{{delay}}s animate__duration-{{duration}}s {{speed}} {{repeat}}\">\n        <div class=\"row\">\n            <div class=\"col-12 text-row\" mbr-class=\"{'col-md-10': cardsAmount == 3,\n                             'col-md-6': cardsAmount != 3,\n                             'order-md-2': reverseContent}\" mbr-if=\"showTitle || showSubtitle || showButtons\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">\n                    FEATURES\n                </h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle, .title-btn\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et vero asperiores dolorem placeat blanditiis eligendi iure laborum, eum ratione ullam dolore at assumenda ad inventore alias.\n                </h3>\n                <div class=\"mbr-section-btn title-btn align-center\" mbr-class=\"{'pt-3':!showSubtitle,\n                                 'pb-3': cardsAmount == 3}\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">VIEW ALL</a>\n                </div>\n            </div>\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/carousel/1.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                               READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/27.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/carousel/2.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/carousel/3.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 4\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/17.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 5\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/32.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"animateFeatures27 mbr-section extFeatures\" group=\"Animate CSS\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"animate-css\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Show Cards Buttons\" name=\"showCardsButtons\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\" selected>6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Text on Left/Right\" name=\"reverseContent\" condition=\"cardsAmount !== '1'\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1272.jpg\" parallax selected> \n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay&&bg.type !== 'color'\">\n    <!-- End block parameters -->\n    \n<!-- Begin Animate CSS Section -->\n<header>Animate</header>\n<select title=\"Container\" name=\"aContainer\">\n<option value>none</option>\n<optgroup label=\"Attention Seekers\">\n  <option value=\"bounce\">bounce</option>\n  <option value=\"flash\">flash</option>\n  <option value=\"pulse\">pulse</option>\n  <option value=\"rubberBand\">rubberBand</option>\n  <option value=\"shakeX\">shakeX</option>\n  <option value=\"shakeY\">shakeY</option>\n  <option value=\"headShake\">headShake</option>\n  <option value=\"swing\">swing</option>\n  <option value=\"tada\">tada</option>\n  <option value=\"wobble\">wobble</option>\n  <option value=\"jello\">jello</option>\n  <option value=\"heartBeat\">heartBeat</option>\n</optgroup>\n<optgroup label=\"Back entrances\">\n  <option value=\"backInDown\">backInDown</option>\n  <option value=\"backInLeft\">backInLeft</option>\n  <option value=\"backInRight\">backInRight</option>\n  <option value=\"backInUp\">backInUp</option>\n</optgroup>\n<optgroup label=\"Back exits<\">\n  <option value=\"backOutDown\">backOutDown</option>\n  <option value=\"backOutLeft\">backOutLeft</option>\n  <option value=\"backOutRight\">backOutRight</option>\n  <option value=\"backOutUp\">backOutUp</option>\n</optgroup>\n<optgroup label=\"Bouncing entrances\">\n  <option value=\"bounceInDown\">bounceInDown</option>\n  <option value=\"bounceInLeft\">bounceInLeft</option>\n  <option value=\"bounceInRight\">bounceInRight</option>\n  <option value=\"bounceInUp\">bounceInUp</option>\n</optgroup>\n<optgroup label=\"Bouncing exits\">\n  <option value=\"bounceOutDown\">bounceOutDown</option>\n  <option value=\"bounceOutLeft\">bounceOutLeft</option>\n  <option value=\"bounceOutRight\">bounceOutRight</option>\n  <option value=\"bounceOutUp\">bounceOutUp</option>\n</optgroup>\n<optgroup label=\"Fading Entrances\">\n  <option value=\"fadeIn\">fadeIn</option>\n  <option value=\"fadeInDown\">fadeInDown</option>\n  <option value=\"fadeInDownBig\">fadeInDownBig</option>\n  <option value=\"fadeInLeft\">fadeInLeft</option>\n  <option value=\"fadeInLeftBig\">fadeInLeftBig</option>\n  <option value=\"fadeInRight\">fadeInRight</option>\n  <option value=\"fadeInRightBig\">fadeInRightBig</option>\n  <option value=\"fadeInUp\">fadeInUp</option>\n  <option value=\"fadeInUpBig\">fadeInUpBig</option>\n</optgroup>\n<optgroup label=\"Fading Exits\">\n  <option value=\"fadeOut\">fadeOut</option>\n  <option value=\"fadeOutDown\">fadeOutDown</option>\n  <option value=\"fadeOutDownBig\">fadeOutDownBig</option>\n  <option value=\"fadeOutLeft\">fadeOutLeft</option>\n  <option value=\"fadeOutLeftBig\">fadeOutLeftBig</option>\n  <option value=\"fadeOutRight\">fadeOutRight</option>\n  <option value=\"fadeOutRightBig\">fadeOutRightBig</option>\n  <option value=\"fadeOutUp\">fadeOutUp</option>\n  <option value=\"fadeOutUpBig\">fadeOutUpBig</option>\n</optgroup>\n<optgroup label=\"Flippers\">\n  <option value=\"flip\">flip</option>\n  <option value=\"flipInX\">flipInX</option>\n  <option value=\"flipInY\">flipInY</option>\n  <option value=\"flipOutX\">flipOutX</option>\n  <option value=\"flipOutY\">flipOutY</option>\n</optgroup>\n<optgroup label=\"Lightspeed\">\n  <option value=\"lightSpeedIn\">lightSpeedIn</option>\n  <option value=\"lightSpeedOut\">lightSpeedOut</option>\n</optgroup>\n<optgroup label=\"Rotating Entrances\">\n  <option value=\"rotateIn\">rotateIn</option>\n  <option value=\"rotateInDownLeft\">rotateInDownLeft</option>\n  <option value=\"rotateInDownRight\">rotateInDownRight</option>\n  <option value=\"rotateInUpLeft\">rotateInUpLeft</option>\n  <option value=\"rotateInUpRight\">rotateInUpRight</option>\n</optgroup>\n<optgroup label=\"Rotating Exits\">\n  <option value=\"rotateOut\">rotateOut</option>\n  <option value=\"rotateOutDownLeft\">rotateOutDownLeft</option>\n  <option value=\"rotateOutDownRight\">rotateOutDownRight</option>\n  <option value=\"rotateOutUpLeft\">rotateOutUpLeft</option>\n  <option value=\"rotateOutUpRight\">rotateOutUpRight</option>\n</optgroup>\n<optgroup label=\"Sliding Entrances\">\n  <option value=\"slideInUp\">slideInUp</option>\n  <option value=\"slideInDown\">slideInDown</option>\n  <option value=\"slideInLeft\" selected>slideInLeft</option>\n  <option value=\"slideInRight\">slideInRight</option>\n</optgroup>\n<optgroup label=\"Sliding Exits\">\n  <option value=\"slideOutUp\">slideOutUp</option>\n  <option value=\"slideOutDown\">slideOutDown</option>\n  <option value=\"slideOutLeft\">slideOutLeft</option>\n  <option value=\"slideOutRight\">slideOutRight</option>\n</optgroup>\n<optgroup label=\"Zoom Entrances\">\n  <option value=\"zoomIn\">zoomIn</option>\n  <option value=\"zoomInDown\">zoomInDown</option>\n  <option value=\"zoomInLeft\">zoomInLeft</option>\n  <option value=\"zoomInRight\">zoomInRight</option>\n  <option value=\"zoomInUp\">zoomInUp</option>\n</optgroup>\n<optgroup label=\"Zoom Exits\">\n  <option value=\"zoomOut\">zoomOut</option>\n  <option value=\"zoomOutDown\">zoomOutDown</option>\n  <option value=\"zoomOutLeft\">zoomOutLeft</option>\n  <option value=\"zoomOutRight\">zoomOutRight</option>\n  <option value=\"zoomOutUp\">zoomOutUp</option>\n</optgroup>\n<optgroup label=\"Specials\">\n  <option value=\"hinge\">hinge</option>\n  <option value=\"jackInTheBox\">jackInTheBox</option>\n  <option value=\"rollIn\">rollIn</option>\n  <option value=\"rollOut\">rollOut</option>\n</optgroup>\n</select>\n\n<input type=\"range\" inline title=\"Delay\" name=\"delay\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n<input type=\"range\" inline title=\"Duration\" name=\"duration\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\n<select title=\"Speed Time\" name=\"speed\">\n  <option value=\"animate__slow\">slow 2s</option>\n  <option value=\"animate__slower\" selected>slower 3s</option>\n  <option value=\"animate__fast\">fast 800ms</option>\n  <option value=\"animate__faster\">faster 500ms</option>\n</select>\n\n<select title=\"Iteration Count\" name=\"repeat\">\n  <option value=\"animate__repeat-1\" selected>1</option>\n  <option value=\"animate__repeat-2\">2</option>\n  <option value=\"animate__repeat-3\">3</option>\n  <option value=\"animate__infinite\">infinite</option>\n</select>\n<!-- End Animate CSS Section -->\n</mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container-fluid {{aContainer}} scrollanimation animate__animated animate__delay-{{delay}}s animate__duration-{{duration}}s {{speed}} {{repeat}}\">\n        <div class=\"row\">\n            <div class=\"col-12 text-row\" mbr-class=\"{'col-md-10': cardsAmount == 3,\n                             'col-md-6': cardsAmount != 3,\n                             'order-md-2': reverseContent}\" mbr-if=\"showTitle || showSubtitle || showButtons\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\">Our Exquisite Gallery</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle, .title-btn\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et vero asperiores dolorem placeat blanditiis eligendi iure laborum, eum ratione ullam dolore at assumenda ad inventore alias.\n                </h3>\n                <div class=\"mbr-section-btn title-btn align-center\" mbr-class=\"{'pt-3':!showSubtitle,\n                                 'pb-3': cardsAmount == 3}\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove\">\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">VIEW ALL</a>\n                </div>\n            </div>\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/carousel/1.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                               READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/27.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/carousel/2.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/carousel/3.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 4\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/17.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card px-3 py-4 col-12 col-md-6 col-lg-4\" mbr-class=\"{'col-xl-3': showTitle || showSubtitle || showButtons}\" mbr-if=\"cardsAmount > 5\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/32.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\" mbr-if=\"showText || showCardsButtons\">\n                        <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .card-btn\">\n                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        </p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn card-btn align-center\" mbr-if=\"showCardsButtons\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd\">\n                            <a href=\"https://mobiri.se\" class=\"btn btn-primary\">\n                                READ MORE\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "uEXK2QKbO6",
           "_anchor": "animateFeatures27-b",
           "_protectedParams": [],
@@ -1423,65 +1479,80 @@
         {
           "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
             },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+            ".trans-wave": {
+              "opacity": "1",
+              "fill": "@bg-value",
+              "pointer-events": "none"
             },
-            ".dentaura-cover": {
-              "margin-left": "auto",
-              "margin-right": "auto",
-              "margin": "0px",
-              "padding": "0px",
+            ".dentaura-container": {
+              "height": "40px",
+              "position": "relative",
               "width": "100%"
             },
-            "hr.dashed": {
-              "border-top": "(@dividerThickness * 1px) dashed @dividerColor",
-              "width": "(@dividerWidth * 10%)"
+            ".dentaura-y-up": {
+              "position": "absolute",
+              "& when (@flipVerti = false)": {
+                "bottom": "39px"
+              },
+              "& when (@flipVerti)": {
+                "top": "39px",
+                "z-index": "@zindexOrderverti"
+              },
+              "left": "0",
+              "width": "100%",
+              "pointer-events": "none"
             },
-            "hr.dotted": {
-              "border-top": "(@dividerThickness * 1px) dotted @dividerColor",
-              "width": "(@dividerWidth * 10%)"
+            ".dentaura-cover": {
+              "background": "transparent",
+              "height": "(@heightWavecover * 1px)",
+              "width": "100%",
+              "position": "relative",
+              "overflow": "hidden",
+              "pointer-events": "none",
+              "& when (@flipVerti)": {
+                "-webkit-transform": "rotateX(180deg)",
+                "-moz-transform": "rotateX(180deg)",
+                "-o-transform": "rotateX(180deg)",
+                "-ms-transform": "rotateX(180deg)",
+                "transform": "rotateX(180deg)",
+                "& when (@flipDownHori)": {
+                  "-webkit-transform": "rotate(180deg)",
+                  "-moz-transform": "rotate(180deg)",
+                  "-o-transform": "rotate(180deg)",
+                  "-ms-transform": "rotate(180deg)",
+                  "transform": "rotate(180deg)"
+                }
+              },
+              "& when (@flipVerti = false)": {
+                "& when (@flipUpHori)": {
+                  "-webkit-transform": "rotateY(180deg)",
+                  "-moz-transform": "rotateY(180deg)",
+                  "-o-transform": "rotateY(180deg)",
+                  "-ms-transform": "rotateY(180deg)",
+                  "transform": "rotateY(180deg)"
+                }
+              }
             },
-            "hr.solid": {
-              "border-top": "(@dividerThickness * 1px) solid @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.double": {
-              "border-top": "(@dividerThicknessdouble * 1px) double @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.splitends": {
-              "height": "30px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "1px 0 0 0",
-              "border-radius": "20px",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.splitends:before": {
-              "display": "block",
-              "content": "\"\"",
-              "height": "30px",
-              "margin-top": "-31px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "0 0 1px 0",
-              "border-radius": "20px"
+            ".dentaura-y-down": {
+              "position": "absolute",
+              "bottom": "0px",
+              "left": "0",
+              "width": "100%",
+              "pointer-events": "none"
             }
           },
-          "_name": "divider1",
+          "_name": "divider14",
           "_sourceTheme": "dentauram4",
-          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>PADDING</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <header>DIVIDER</header>        \n        <select title=\"Divider Type\" name=\"dividerType\">\n            <option value=\"dashed\" selected>Dashed</option>\n            <option value=\"dotted\">Dotted</option>\n            <option value=\"double\">Double</option>\n            <option value=\"solid\">Solid</option>\n            <option value=\"splitends\">Split Ends</option>\n        </select>\n        <input type=\"color\" title=\"Divider Color\" name=\"dividerColor\" value=\"#999999\">\n        <input type=\"range\" inline title=\"Divider Width\" name=\"dividerWidth\" min=\"1\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"range\" inline title=\"Divider Thickness\" name=\"dividerThickness\" min=\"1\" max=\"4\" step=\"1\" value=\"1\" condition=\"dividerType !== 'double' && dividerType !== 'splitends'\">\n        <input type=\"range\" inline title=\"Divider Thickness\" name=\"dividerThicknessdouble\" min=\"3\" max=\"4\" step=\"1\" value=\"3\" condition=\"dividerType == 'double' && dividerType !== 'dashed' && dividerType !== 'dotted' && dividerType !== 'solid' && dividerType !== 'splitends'\">\n        <header>BACKGROUND</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n        \n    <div class=\"container-fluid\">\n        <div class=\"dentaura-cover\">\n            <hr mbr-if=\"dividerType == 'dashed'\" class=\"dashed\">\n            <hr mbr-if=\"dividerType == 'dotted'\" class=\"dotted\">\n            <hr mbr-if=\"dividerType == 'solid'\" class=\"solid\">\n            <hr mbr-if=\"dividerType == 'double'\" class=\"double\">\n            <hr mbr-if=\"dividerType == 'splitends'\" class=\"splitends\">\n        </div>\n    </div>\n</section>",
-          "_cid": "uEXQa3IWQG",
-          "_anchor": "divider1-e",
+          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>DIVIDER</header>        \n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"color\" title=\"Divider Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Flip Vertical\" name=\"flipVerti\">\n        <input type=\"checkbox\" title=\"Flip Horizontal\" name=\"flipUpHori\" condition=\"flipVerti == false\" checked>\n        <input type=\"checkbox\" title=\"Flip Horizontal\" name=\"flipDownHori\" condition=\"flipVerti\" checked>\n        <header>BLOCK ORDER (applicable when flipped downwards and when used in combination with other dividers)</header>\n        <input type=\"range\" inline title=\"Move backwards or forwards\" name=\"zindexOrderverti\" min=\"1\" max=\"100\" step=\"1\" value=\"1\" condition=\"flipVerti\">\n        <header>Wave Cover</header>\n        <input type=\"range\" inline title=\"Wave Cover height to avoid wave getting cut off\" name=\"heightWavecover\" min=\"200\" max=\"500\" step=\"1\" value=\"200\">\n        <header>NOTE:</header>\n        <header>Adjust height of blocks overlapped accordingly to accommodate this wave divider. Use only in suitable situations (eg: not suitable for small footer blocks). Minimum overlapping height of this block is 200px.</header>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"dentaura-container\">\n        <div class=\"dentaura-y-up\">\n            <div class=\"dentaura-cover\">\n                <svg viewBox=\"0 0 500 145\" preserveAspectRatio=\"none\" class=\"dentaura-y-down\"><path class=\"trans-wave\" d=\"M-0.28,131.73 C92.83,82.40 343.39,190.95 500.27,110.02 L500.00,150.00 L0.00,150.00 Z\"></path></svg>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uEY6Xff325",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "divider14-w"
         },
         {
           "alias": false,
@@ -1828,62 +1899,55 @@
         {
           "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+            "padding-top": "0px",
+            "padding-bottom": "0px",
+            ".container-fluid": {
+              "margin": "0px",
+              "padding": "0px",
+              "height": "auto",
+              "min-height": "50px"
             },
             ".dentaura-cover": {
               "margin-left": "auto",
               "margin-right": "auto",
+              "width": "100% !important",
+              "background-color": "@bgColor",
               "margin": "0px",
               "padding": "0px",
-              "width": "100%"
+              "height": "(@heightBlock * 1px)",
+              "z-index": "1",
+              "position": "relative",
+              "overflow": "hidden"
             },
-            "hr.dashed": {
-              "border-top": "(@dividerThickness * 1px) dashed @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.dotted": {
-              "border-top": "(@dividerThickness * 1px) dotted @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.solid": {
-              "border-top": "(@dividerThickness * 1px) solid @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.double": {
-              "border-top": "(@dividerThicknessdouble * 1px) double @dividerColor",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.splitends": {
-              "height": "30px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "1px 0 0 0",
-              "border-radius": "20px",
-              "width": "(@dividerWidth * 10%)"
-            },
-            "hr.splitends:before": {
-              "display": "block",
-              "content": "\"\"",
-              "height": "30px",
-              "margin-top": "-31px",
-              "border-style": "solid",
-              "border-color": "@dividerColor",
-              "border-width": "0 0 1px 0",
-              "border-radius": "20px"
+            ".dentaura-cover .dentaura-skew:before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "-80px",
+              "overflow": "visible",
+              "width": "100%",
+              "height": "(@heightSkew * 1px)",
+              "background-color": "@bgColortwo",
+              "z-index": "-1",
+              "-webkit-transform": "skewY(@angleSkew * -1deg)",
+              "-moz-transform": "skewY(@angleSkew * -1deg)",
+              "-ms-transform": "skewY(@angleSkew * -1deg)",
+              "-o-transform": "skewY(@angleSkew * -1deg)",
+              "transform": "skewY(@angleSkew * -1deg)",
+              "-webkit-backface-visibility": "hidden",
+              "backface-visibility": "initial",
+              "& when (@shadow)": {
+                "-webkit-box-shadow": "0 (@shadowHeight * 1px) (@shadowBlur * 1px) 10px @shadowColor",
+                "-moz-box-shadow": "0 (@shadowHeight * 1px) (@shadowBlur * 1px) 10px @shadowColor",
+                "box-shadow": "0 (@shadowHeight * 1px) (@shadowBlur * 1px) 10px @shadowColor"
+              }
             }
           },
-          "_name": "divider1",
+          "_name": "divider",
           "_sourceTheme": "dentauram4",
-          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>PADDING</header>\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"1\" max=\"9\" step=\"1\" value=\"1\">\n        <header>DIVIDER</header>        \n        <select title=\"Divider Type\" name=\"dividerType\">\n            <option value=\"dashed\" selected=\"\">Dashed</option>\n            <option value=\"dotted\">Dotted</option>\n            <option value=\"double\">Double</option>\n            <option value=\"solid\">Solid</option>\n            <option value=\"splitends\">Split Ends</option>\n        </select>\n        <input type=\"color\" title=\"Divider Color\" name=\"dividerColor\" value=\"#999999\">\n        <input type=\"range\" inline=\"\" title=\"Divider Width\" name=\"dividerWidth\" min=\"1\" max=\"10\" step=\"1\" value=\"10\">\n        <input type=\"range\" inline=\"\" title=\"Divider Thickness\" name=\"dividerThickness\" min=\"1\" max=\"4\" step=\"1\" value=\"1\" condition=\"dividerType !== 'double' &amp;&amp; dividerType !== 'splitends'\">\n        <input type=\"range\" inline=\"\" title=\"Divider Thickness\" name=\"dividerThicknessdouble\" min=\"3\" max=\"4\" step=\"1\" value=\"3\" condition=\"dividerType == 'double' &amp;&amp; dividerType !== 'dashed' &amp;&amp; dividerType !== 'dotted' &amp;&amp; dividerType !== 'solid' &amp;&amp; dividerType !== 'splitends'\">\n        <header>BACKGROUND</header>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\" selected=\"\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n        \n    <div class=\"container-fluid\">\n        <div class=\"dentaura-cover\">\n            <hr mbr-if=\"dividerType == 'dashed'\" class=\"dashed\">\n            <hr mbr-if=\"dividerType == 'dotted'\" class=\"dotted\">\n            <hr mbr-if=\"dividerType == 'solid'\" class=\"solid\">\n            <hr mbr-if=\"dividerType == 'double'\" class=\"double\">\n            <hr mbr-if=\"dividerType == 'splitends'\" class=\"splitends\">\n        </div>\n    </div>\n</section>",
-          "_anchor": "divider1-l",
-          "_isUserblock": true,
-          "_cid": "uEY0bUQZ61",
+          "_customHTML": "<section class=\"mbr-section\" group=\"Dentaura Divider\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>BLOCK</header>\n\t\t<input type=\"range\" inline title=\"Block Height\" name=\"heightBlock\" min=\"50\" max=\"250\" step=\"1\" value=\"68\">\n        <header>SKEW</header>\n        <input type=\"range\" inline title=\"Height\" name=\"heightSkew\" min=\"20\" max=\"250\" step=\"1\" value=\"109\">\n        <input type=\"range\" inline title=\"Angle\" name=\"angleSkew\" min=\"-6\" max=\"6\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Skew Color\" name=\"bgColortwo\" value=\"#0ba410\">\n        <header>BACKGROUND</header>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#000000\">\n        <header>SHADOW</header>\n        <input type=\"checkbox\" title=\"Shadow\" name=\"shadow\">\n        <input type=\"color\" title=\"Shadow Color\" name=\"shadowColor\" value=\"#465052\" condition=\"shadow\">\n        <input type=\"range\" inline title=\"Shadow Height\" name=\"shadowHeight\" min=\"-10\" max=\"1\" step=\"1\" value=\"-8\" condition=\"shadow\">\n        <input type=\"range\" inline title=\"Shadow Blur Radius\" name=\"shadowBlur\" min=\"2\" max=\"8\" step=\"1\" value=\"5\" condition=\"shadow\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container-fluid\">\n        <div class=\"dentaura-cover\"><div class=\"dentaura-skew\"></div></div>\n    </div>\n</section>",
+          "_cid": "uEY4MAJc6r",
+          "_anchor": "divider-q",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
