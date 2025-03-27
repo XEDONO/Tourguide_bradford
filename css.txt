@@ -1,0 +1,139 @@
+& when not (@fullScreen) {
+  padding-top: (@paddingTop * 15px);
+  padding-bottom: (@paddingBottom * 15px);
+}
+
+& when (@bg-type = 'color') {
+  background-color: @bg-value;
+}
+
+& when (@bg-type = 'image') {
+  background-image: url(@bg-value);
+}
+
+.slider-text-two {
+  background: fade(@textColor, 80%) none repeat scroll 0 0;
+  outline: 1px solid fade(contrast(@textColor), 20%);
+  outline-offset: -15px;
+  padding: 65px 50px;
+}
+
+.mbr-section-title {
+  color: #000000;
+}
+
+.mbr-text {
+  color: #000000;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+
+@media screen and (~'-ms-high-contrast: active'), (~'-ms-high-contrast: none') {
+
+  .slider-text-two {
+    outline: 15px solid fade(@textColor, 80%);
+    border: 1px solid fade(contrast(@textColor), 20%);
+  }
+}
+
+.search-area {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.search-bar input[type="text"] {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+  background-color: #ffd700;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search-suggestions span {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.search-suggestions button {
+  background-color: #836FFF;
+  color: white;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@keyframes zoom-out {
+
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .map-container {
+    height: 50vh;
+  }
+
+  .search-area {
+    width: 95%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .top-bar {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .map-container {
+    height: 30vh;
+  }
+
+  .search-suggestions {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+
+.container {
+}

@@ -1,0 +1,210 @@
+<section class="animateHeader2 extHeader" group="Animate CSS" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{
+         'mbr-fullscreen': fullScreen,
+         'mbr-parallax-background': bg.parallax}" plugins="animate-css">
+
+    <mbr-parameters>
+    <!-- Block parameters controls (Blue "Gear" panel) -->
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Show Arrow" name="showArrow" condition="fullScreen" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="10" condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="10" condition="fullScreen == false">
+        <input type="range" title="Width Text" name="widthText" min="1" max="6" step="1" value="6">
+        <input type="checkbox" title="Show Title" name="showTitle" checked>
+        <input type="checkbox" title="Show Subtitle" name="showSubtitle">
+        <input type="color" title="Bg Text Color" name="textColor" value="#ffffff">
+        <select title="Align" name="alignTitle" condition="showTitle || showSubtitle">
+            <option value="1">Left</option>
+            <option value="2" selected>Center</option>
+            <option value="3">Right</option>
+        </select>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Background Image" value="file:///C:/Users/XEDONO/AppData/Local/Mobirise.com/Mobirise/projects/project-2025-03-24_041123/assets/images/husa-2000x1679.png" selected parallax>
+            <input type="color" title="Background Color" value="#232323">
+            <input type="video" title="Background Video" value="http://www.youtube.com/watch?v=uNCr7NdOJgw">
+        </fieldset>
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#193bba" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.4" condition="overlay&&bg.type !== 'color'">
+    <!-- End block parameters -->
+    
+<!-- Begin Animate CSS Section -->
+<header>Animate</header>
+<select title="Container" name="aContainer">
+<option value>none</option>
+<optgroup label="Attention Seekers">
+  <option value="bounce">bounce</option>
+  <option value="flash">flash</option>
+  <option value="pulse">pulse</option>
+  <option value="rubberBand">rubberBand</option>
+  <option value="shakeX">shakeX</option>
+  <option value="shakeY">shakeY</option>
+  <option value="headShake">headShake</option>
+  <option value="swing">swing</option>
+  <option value="tada">tada</option>
+  <option value="wobble">wobble</option>
+  <option value="jello">jello</option>
+  <option value="heartBeat">heartBeat</option>
+</optgroup>
+<optgroup label="Back entrances">
+  <option value="backInDown">backInDown</option>
+  <option value="backInLeft">backInLeft</option>
+  <option value="backInRight">backInRight</option>
+  <option value="backInUp">backInUp</option>
+</optgroup>
+<optgroup label="Back exits<">
+  <option value="backOutDown">backOutDown</option>
+  <option value="backOutLeft">backOutLeft</option>
+  <option value="backOutRight">backOutRight</option>
+  <option value="backOutUp">backOutUp</option>
+</optgroup>
+<optgroup label="Bouncing entrances">
+  <option value="bounceInDown">bounceInDown</option>
+  <option value="bounceInLeft">bounceInLeft</option>
+  <option value="bounceInRight">bounceInRight</option>
+  <option value="bounceInUp">bounceInUp</option>
+</optgroup>
+<optgroup label="Bouncing exits">
+  <option value="bounceOutDown">bounceOutDown</option>
+  <option value="bounceOutLeft">bounceOutLeft</option>
+  <option value="bounceOutRight">bounceOutRight</option>
+  <option value="bounceOutUp">bounceOutUp</option>
+</optgroup>
+<optgroup label="Fading Entrances">
+  <option value="fadeIn" selected>fadeIn</option>
+  <option value="fadeInDown">fadeInDown</option>
+  <option value="fadeInDownBig">fadeInDownBig</option>
+  <option value="fadeInLeft">fadeInLeft</option>
+  <option value="fadeInLeftBig">fadeInLeftBig</option>
+  <option value="fadeInRight">fadeInRight</option>
+  <option value="fadeInRightBig">fadeInRightBig</option>
+  <option value="fadeInUp">fadeInUp</option>
+  <option value="fadeInUpBig">fadeInUpBig</option>
+</optgroup>
+<optgroup label="Fading Exits">
+  <option value="fadeOut">fadeOut</option>
+  <option value="fadeOutDown">fadeOutDown</option>
+  <option value="fadeOutDownBig">fadeOutDownBig</option>
+  <option value="fadeOutLeft">fadeOutLeft</option>
+  <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+  <option value="fadeOutRight">fadeOutRight</option>
+  <option value="fadeOutRightBig">fadeOutRightBig</option>
+  <option value="fadeOutUp">fadeOutUp</option>
+  <option value="fadeOutUpBig">fadeOutUpBig</option>
+</optgroup>
+<optgroup label="Flippers">
+  <option value="flip">flip</option>
+  <option value="flipInX">flipInX</option>
+  <option value="flipInY">flipInY</option>
+  <option value="flipOutX">flipOutX</option>
+  <option value="flipOutY">flipOutY</option>
+</optgroup>
+<optgroup label="Lightspeed">
+  <option value="lightSpeedIn">lightSpeedIn</option>
+  <option value="lightSpeedOut">lightSpeedOut</option>
+</optgroup>
+<optgroup label="Rotating Entrances">
+  <option value="rotateIn">rotateIn</option>
+  <option value="rotateInDownLeft">rotateInDownLeft</option>
+  <option value="rotateInDownRight">rotateInDownRight</option>
+  <option value="rotateInUpLeft">rotateInUpLeft</option>
+  <option value="rotateInUpRight">rotateInUpRight</option>
+</optgroup>
+<optgroup label="Rotating Exits">
+  <option value="rotateOut">rotateOut</option>
+  <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+  <option value="rotateOutDownRight">rotateOutDownRight</option>
+  <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+  <option value="rotateOutUpRight">rotateOutUpRight</option>
+</optgroup>
+<optgroup label="Sliding Entrances">
+  <option value="slideInUp">slideInUp</option>
+  <option value="slideInDown">slideInDown</option>
+  <option value="slideInLeft">slideInLeft</option>
+  <option value="slideInRight">slideInRight</option>
+</optgroup>
+<optgroup label="Sliding Exits">
+  <option value="slideOutUp">slideOutUp</option>
+  <option value="slideOutDown">slideOutDown</option>
+  <option value="slideOutLeft">slideOutLeft</option>
+  <option value="slideOutRight">slideOutRight</option>
+</optgroup>
+<optgroup label="Zoom Entrances">
+  <option value="zoomIn">zoomIn</option>
+  <option value="zoomInDown">zoomInDown</option>
+  <option value="zoomInLeft">zoomInLeft</option>
+  <option value="zoomInRight">zoomInRight</option>
+  <option value="zoomInUp">zoomInUp</option>
+</optgroup>
+<optgroup label="Zoom Exits">
+  <option value="zoomOut">zoomOut</option>
+  <option value="zoomOutDown">zoomOutDown</option>
+  <option value="zoomOutLeft">zoomOutLeft</option>
+  <option value="zoomOutRight">zoomOutRight</option>
+  <option value="zoomOutUp">zoomOutUp</option>
+</optgroup>
+<optgroup label="Specials">
+  <option value="hinge">hinge</option>
+  <option value="jackInTheBox">jackInTheBox</option>
+  <option value="rollIn">rollIn</option>
+  <option value="rollOut">rollOut</option>
+</optgroup>
+</select>
+
+<input type="range" inline title="Delay" name="delay" min="0" max="10" step="1" value="0">
+<input type="range" inline title="Duration" name="duration" min="0" max="10" step="1" value="0">
+
+<select title="Speed Time" name="speed">
+  <option value="animate__slow" selected>slow 2s</option>
+  <option value="animate__slower">slower 3s</option>
+  <option value="animate__fast">fast 800ms</option>
+  <option value="animate__faster">faster 500ms</option>
+</select>
+
+<select title="Iteration Count" name="repeat">
+  <option value="animate__repeat-1" selected>1</option>
+  <option value="animate__repeat-2">2</option>
+  <option value="animate__repeat-3">3</option>
+  <option value="animate__infinite">infinite</option>
+</select>
+<!-- End Animate CSS Section -->
+</mbr-parameters>
+
+    <div class="mbr-overlay" mbr-if="overlay&&bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}">
+    </div>
+    <div class="container {{aContainer}} scrollanimation animate__animated animate__delay-{{delay}}s animate__duration-{{duration}}s {{speed}} {{repeat}} text-center" data-stellar-background-ratio=".5">
+      <div class="row slider-wrapper" mbr-if="showTitle || showSubtitle" mbr-class="{'justify-content-center': alignTitle==2, 'justify-content-end': alignTitle==3}">
+        <div mbr-class="{'col-lg-4 col-md-6': widthText == 1, 'col-lg-5 col-md-6': widthText == 2, 'col-md-6': widthText == 3, 'col-lg-8 col-md-6': widthText == 4, 'col-lg-9 col-md-12': widthText == 5, 'col-lg-10 col-md-12': widthText == 6}">
+            <div class="slider-text  slider-text-two" >
+              <div class="container-fluid">
+        
+            <div class="search-area">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for a place, organisation or service here.">
+                    <button>Search</button>
+                </div>
+                <div class="search-suggestions">
+                    <span>Search Suggestions</span>
+                    <button>Housing</button>
+                    <button>Money</button>
+                    <button>Transport</button>
+                    <button>Education</button>
+                    <button>Health</button>
+                    <button>Family</button>
+                </div>
+            
+        
+    </div>
+            </h4></div>
+        </div>
+      </div>
+    </div>
+    <div mbr-if="showArrow && fullScreen" class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
