@@ -1,210 +1,593 @@
-<section class="animateHeader2 extHeader" group="Animate CSS" data-bg-video="{{bg.type == 'video'&&bg.value.url}}" mbr-class="{
-         'mbr-fullscreen': fullScreen,
-         'mbr-parallax-background': bg.parallax}" plugins="animate-css">
+<section mbr-id="_blog_post" class="mbr-section article blog_post">
 
     <mbr-parameters>
     <!-- Block parameters controls (Blue "Gear" panel) -->
-        <input type="checkbox" title="Full Screen" name="fullScreen">
-        <input type="checkbox" title="Show Arrow" name="showArrow" condition="fullScreen" checked>
-        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="10" condition="fullScreen == false">
-        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="10" condition="fullScreen == false">
-        <input type="range" title="Width Text" name="widthText" min="1" max="6" step="1" value="6">
-        <input type="checkbox" title="Show Title" name="showTitle" checked>
-        <input type="checkbox" title="Show Subtitle" name="showSubtitle">
-        <input type="color" title="Bg Text Color" name="textColor" value="#ffffff">
-        <select title="Align" name="alignTitle" condition="showTitle || showSubtitle">
-            <option value="1">Left</option>
-            <option value="2" selected>Center</option>
-            <option value="3">Right</option>
-        </select>
-        <fieldset type="background" name="bg" parallax>
-            <input type="image" title="Background Image" value="file:///C:/Users/XEDONO/AppData/Local/Mobirise.com/Mobirise/projects/project-2025-03-24_041123/assets/images/husa-2000x1679.png" selected parallax>
-            <input type="color" title="Background Color" value="#232323">
-            <input type="video" title="Background Video" value="http://www.youtube.com/watch?v=uNCr7NdOJgw">
-        </fieldset>
-        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'">
-        <input type="color" title="Overlay Color" name="overlayColor" value="#193bba" condition="overlay&&bg.type !== 'color'">
-        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.4" condition="overlay&&bg.type !== 'color'">
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="8" step="1" value="0">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="8" step="1" value="2">
+        <input type="color" title="Background Color" name="bgColor" value="#0f0f0f">
+      <input type="color" title="Theme Color" name="tColor" value="#346b2a">
+      <input type="color" title="Theme Text" name="ttColor" value="#073b4c">
+      <input type="range" inline title="Post Number" name="postnumber" min="3" max="10" step="1" value="5">
+      <input type="range" inline title="Trending Number" name="trendingnumber" min="3" max="7" step="1" value="3">
+      <input type="range" inline title="Latest Post" name="latestpost" min="3" max="7" step="1" value="4">
+      <input type="checkbox" title="Show Author Info" name="showauthor" checked>
+      <input type="checkbox" title="Show Pagination" name="showpagination" checked>
+      <input type="checkbox" title="Show Tag" name="showtag" checked>
     <!-- End block parameters -->
-    
-<!-- Begin Animate CSS Section -->
-<header>Animate</header>
-<select title="Container" name="aContainer">
-<option value>none</option>
-<optgroup label="Attention Seekers">
-  <option value="bounce">bounce</option>
-  <option value="flash">flash</option>
-  <option value="pulse">pulse</option>
-  <option value="rubberBand">rubberBand</option>
-  <option value="shakeX">shakeX</option>
-  <option value="shakeY">shakeY</option>
-  <option value="headShake">headShake</option>
-  <option value="swing">swing</option>
-  <option value="tada">tada</option>
-  <option value="wobble">wobble</option>
-  <option value="jello">jello</option>
-  <option value="heartBeat">heartBeat</option>
-</optgroup>
-<optgroup label="Back entrances">
-  <option value="backInDown">backInDown</option>
-  <option value="backInLeft">backInLeft</option>
-  <option value="backInRight">backInRight</option>
-  <option value="backInUp">backInUp</option>
-</optgroup>
-<optgroup label="Back exits<">
-  <option value="backOutDown">backOutDown</option>
-  <option value="backOutLeft">backOutLeft</option>
-  <option value="backOutRight">backOutRight</option>
-  <option value="backOutUp">backOutUp</option>
-</optgroup>
-<optgroup label="Bouncing entrances">
-  <option value="bounceInDown">bounceInDown</option>
-  <option value="bounceInLeft">bounceInLeft</option>
-  <option value="bounceInRight">bounceInRight</option>
-  <option value="bounceInUp">bounceInUp</option>
-</optgroup>
-<optgroup label="Bouncing exits">
-  <option value="bounceOutDown">bounceOutDown</option>
-  <option value="bounceOutLeft">bounceOutLeft</option>
-  <option value="bounceOutRight">bounceOutRight</option>
-  <option value="bounceOutUp">bounceOutUp</option>
-</optgroup>
-<optgroup label="Fading Entrances">
-  <option value="fadeIn" selected>fadeIn</option>
-  <option value="fadeInDown">fadeInDown</option>
-  <option value="fadeInDownBig">fadeInDownBig</option>
-  <option value="fadeInLeft">fadeInLeft</option>
-  <option value="fadeInLeftBig">fadeInLeftBig</option>
-  <option value="fadeInRight">fadeInRight</option>
-  <option value="fadeInRightBig">fadeInRightBig</option>
-  <option value="fadeInUp">fadeInUp</option>
-  <option value="fadeInUpBig">fadeInUpBig</option>
-</optgroup>
-<optgroup label="Fading Exits">
-  <option value="fadeOut">fadeOut</option>
-  <option value="fadeOutDown">fadeOutDown</option>
-  <option value="fadeOutDownBig">fadeOutDownBig</option>
-  <option value="fadeOutLeft">fadeOutLeft</option>
-  <option value="fadeOutLeftBig">fadeOutLeftBig</option>
-  <option value="fadeOutRight">fadeOutRight</option>
-  <option value="fadeOutRightBig">fadeOutRightBig</option>
-  <option value="fadeOutUp">fadeOutUp</option>
-  <option value="fadeOutUpBig">fadeOutUpBig</option>
-</optgroup>
-<optgroup label="Flippers">
-  <option value="flip">flip</option>
-  <option value="flipInX">flipInX</option>
-  <option value="flipInY">flipInY</option>
-  <option value="flipOutX">flipOutX</option>
-  <option value="flipOutY">flipOutY</option>
-</optgroup>
-<optgroup label="Lightspeed">
-  <option value="lightSpeedIn">lightSpeedIn</option>
-  <option value="lightSpeedOut">lightSpeedOut</option>
-</optgroup>
-<optgroup label="Rotating Entrances">
-  <option value="rotateIn">rotateIn</option>
-  <option value="rotateInDownLeft">rotateInDownLeft</option>
-  <option value="rotateInDownRight">rotateInDownRight</option>
-  <option value="rotateInUpLeft">rotateInUpLeft</option>
-  <option value="rotateInUpRight">rotateInUpRight</option>
-</optgroup>
-<optgroup label="Rotating Exits">
-  <option value="rotateOut">rotateOut</option>
-  <option value="rotateOutDownLeft">rotateOutDownLeft</option>
-  <option value="rotateOutDownRight">rotateOutDownRight</option>
-  <option value="rotateOutUpLeft">rotateOutUpLeft</option>
-  <option value="rotateOutUpRight">rotateOutUpRight</option>
-</optgroup>
-<optgroup label="Sliding Entrances">
-  <option value="slideInUp">slideInUp</option>
-  <option value="slideInDown">slideInDown</option>
-  <option value="slideInLeft">slideInLeft</option>
-  <option value="slideInRight">slideInRight</option>
-</optgroup>
-<optgroup label="Sliding Exits">
-  <option value="slideOutUp">slideOutUp</option>
-  <option value="slideOutDown">slideOutDown</option>
-  <option value="slideOutLeft">slideOutLeft</option>
-  <option value="slideOutRight">slideOutRight</option>
-</optgroup>
-<optgroup label="Zoom Entrances">
-  <option value="zoomIn">zoomIn</option>
-  <option value="zoomInDown">zoomInDown</option>
-  <option value="zoomInLeft">zoomInLeft</option>
-  <option value="zoomInRight">zoomInRight</option>
-  <option value="zoomInUp">zoomInUp</option>
-</optgroup>
-<optgroup label="Zoom Exits">
-  <option value="zoomOut">zoomOut</option>
-  <option value="zoomOutDown">zoomOutDown</option>
-  <option value="zoomOutLeft">zoomOutLeft</option>
-  <option value="zoomOutRight">zoomOutRight</option>
-  <option value="zoomOutUp">zoomOutUp</option>
-</optgroup>
-<optgroup label="Specials">
-  <option value="hinge">hinge</option>
-  <option value="jackInTheBox">jackInTheBox</option>
-  <option value="rollIn">rollIn</option>
-  <option value="rollOut">rollOut</option>
-</optgroup>
-</select>
+    </mbr-parameters> 
 
-<input type="range" inline title="Delay" name="delay" min="0" max="10" step="1" value="0">
-<input type="range" inline title="Duration" name="duration" min="0" max="10" step="1" value="0">
-
-<select title="Speed Time" name="speed">
-  <option value="animate__slow" selected>slow 2s</option>
-  <option value="animate__slower">slower 3s</option>
-  <option value="animate__fast">fast 800ms</option>
-  <option value="animate__faster">faster 500ms</option>
-</select>
-
-<select title="Iteration Count" name="repeat">
-  <option value="animate__repeat-1" selected>1</option>
-  <option value="animate__repeat-2">2</option>
-  <option value="animate__repeat-3">3</option>
-  <option value="animate__infinite">infinite</option>
-</select>
-<!-- End Animate CSS Section -->
-</mbr-parameters>
-
-    <div class="mbr-overlay" mbr-if="overlay&&bg.type !== 'color'" opacity="{{overlayOpacity}}" bg-color="{{overlayColor}}">
-    </div>
-    <div class="container {{aContainer}} scrollanimation animate__animated animate__delay-{{delay}}s animate__duration-{{duration}}s {{speed}} {{repeat}} text-center" data-stellar-background-ratio=".5">
-      <div class="row slider-wrapper" mbr-if="showTitle || showSubtitle" mbr-class="{'justify-content-center': alignTitle==2, 'justify-content-end': alignTitle==3}">
-        <div mbr-class="{'col-lg-4 col-md-6': widthText == 1, 'col-lg-5 col-md-6': widthText == 2, 'col-md-6': widthText == 3, 'col-lg-8 col-md-6': widthText == 4, 'col-lg-9 col-md-12': widthText == 5, 'col-lg-10 col-md-12': widthText == 6}">
-            <div class="slider-text  slider-text-two" >
-              <div class="container-fluid">
-        
-            <div class="search-area">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for a place, organisation or service here.">
-                    <button>Search</button>
+    <section class="blog-listing gray-bg">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-lg-8 m-15px-tb">
+                    <div class="row">
+                      <div class="col-sm-12">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2014/08/01/15/51/manhattan-407703_960_720.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                      <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" mbr-if="postnumber > 1">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" mbr-if="postnumber > 2">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" mbr-if="postnumber > 3">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" mbr-if="postnumber > 4">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" mbr-if="postnumber > 5">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" mbr-if="postnumber > 6">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col-sm-6" mbr-if="postnumber > 7">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col-sm-6" mbr-if="postnumber > 8">
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span mbr-text>04</span>
+                                        <label mbr-text>FEB</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="https://cdn.pixabay.com/photo/2015/08/16/14/06/magazine-891005__340.jpg" title alt>
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-bar" mbr-buttons>
+                                        <a href="#" class="px-btn-arrow btn-theme">
+                                            <span>Read More</span>
+                                            <i class="arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12" mbr-if="showpagination">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item" mbr-text>
+                                    <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item" mbr-text><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" mbr-text>
+                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item" mbr-text><a class="page-link" href="#">3</a></li>
+                                <li class="page-item" mbr-text>
+                                    <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="search-suggestions">
-                    <span>Search Suggestions</span>
-                    <button>Housing</button>
-                    <button>Money</button>
-                    <button>Transport</button>
-                    <button>Education</button>
-                    <button>Health</button>
-                    <button>Family</button>
+
+                <div class="col-lg-4 m-15px-tb blog-aside">
+                    <!-- Author -->
+                    <div class="widget widget-author" mbr-if="showauthor">
+                        <div class="widget-title">
+                            <h3>Author</h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="media align-items-center">
+                                <div class="avatar">
+                                    <img src="https://via.placeholder.com/400x200/E6E6FA/000000" title alt>
+                                </div>
+                                <div class="media-body">
+                                    <h6>Hello, I'm<br>Mr Singa</h6>
+                                </div>
+                            </div>
+                            <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. Lets talk on WhatApp <b>+2349066849761</b></p>
+                        </div>
+                    </div>
+                    <!-- End Author -->
+
+                    <!-- Trending Post -->
+                    <div class="widget widget-post">
+                        <div class="widget-title">
+                            <h3>Trending Now</h3>
+                        </div>
+                        <div class="widget-body">
+<div class="latest-post-aside media" mbr-if="trendingnumber > 0">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                  <div class="lpa-meta" mbr-text>
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/E6E6FA/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="latest-post-aside media" mbr-if="trendingnumber > 1">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta" mbr-text>
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFA07A/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="latest-post-aside media" mbr-if="trendingnumber > 2">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="trendingnumber > 3">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="trendingnumber > 4">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="trendingnumber > 5">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="trendingnumber > 6">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Trending Post -->
+
+                    <!-- Latest Post -->
+                    <div class="widget widget-latest-post">
+                        <div class="widget-title">
+                            <h3>Latest Post</h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="latest-post-aside media" mbr-if="latestpost > 0">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="details.html">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/E6E6FA/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="latest-post-aside media" mbr-if="latestpost > 1">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFA07A/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="latest-post-aside media" mbr-if="latestpost > 2">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="latestpost > 3">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="latestpost > 4">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="latestpost > 5">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+                          <div class="latest-post-aside media" mbr-if="latestpost > 6">
+                                <div class="lpa-left media-body">
+                                    <div class="lpa-title">
+                                        <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                    </div>
+                                    <div class="lpa-meta">
+                                        <i class="name">
+                                            Rachel Roth
+                                        </i>
+                                        <i class="date">
+                                            26 FEB 2020
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="lpa-right">
+                                    <a href="#">
+                                        <img src="https://via.placeholder.com/400x200/FFF0F5/000000" title alt>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End Latest Post -->
+
+                    <!-- widget Tags -->
+                    <div class="widget widget-tags" mbr-if="showtag">
+                        <div class="widget-title">
+                            <h3>Latest Tags</h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="nav tag-cloud" mbr-text mbr-buttons><a href="#" data-app-placeholder="Type Text" class>Design</a>
+                                <a href="#" data-app-placeholder="Type Text" class>Development</a>
+                                 <a href="#" data-app-placeholder="Type Text" class>Travel</a>
+                                <a href="#" data-app-placeholder="Type Text" class>Web Design</a>
+                                <a href="#" data-app-placeholder="Type Text">Marketing</a>
+                                <a href="#" data-app-placeholder="Type Text" class>Research</a>
+                                <a href="#" data-app-placeholder="Type Text">Managment</a></div>
+                        </div>
+                    </div>
+                    <!-- End widget Tags -->
                 </div>
-            
-        
-    </div>
-            </h4></div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div mbr-if="showArrow && fullScreen" class="mbr-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
-        </a>
-    </div>
+    </section>
 </section>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
